@@ -37,8 +37,8 @@ function fun2(){
      
         
     } 
-    context.stroke();
-    e.addEventListener('click', dispaly,false);
+    // context.stroke();
+    e.addEventListener('click', dispaly);
 }
 
 
@@ -85,15 +85,13 @@ function dispaly(event,second) {
         count++;
           
     }
-     context.stroke();
+    //  context.stroke();
        
     }
 
 //on click play pause btn functionality
 function fun3() {
     let btn = document.getElementById("playpause")
-    
-   
     if (btn.value === "0") {
         btn.innerHTML=`<i class="fas fa-play"></i>`
         btn.value="1"
@@ -117,6 +115,7 @@ function color() {
     timer = setInterval(() => {
        
         dispaly("event",a)
+        console.log(a);
         a += screensize/songlengthinsec;
     }, 1000);
 
