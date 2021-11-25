@@ -2,6 +2,7 @@
   width: 100%;
   margin: auto;
   position: relative;
+  cursor: pointer;
 }
 canvas {
   width: 100%;
@@ -22,11 +23,14 @@ body {
   border-color: aqua;
   border-radius: 15px;
 }
+.btn-tag:hover {
+  cursor: pointer;
+}
 .small-btn {
   padding: 2px 12px;
 }
 .large-btn {
-  padding: 8px 18px;
+  padding: 12px 21px;
 }
 .section1 {
   position: fixed;

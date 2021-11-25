@@ -124,9 +124,13 @@ function color() {
 
 //on pause stroting the curent-media-time
 audio.onpause = function (e) {
-    console.log(e);
     clearInterval(timer)
-    a = parseInt(audio.currentTime)*20;
+    let btn = document.getElementById("playpause")
+    btn.innerHTML=`<i class="fas fa-play"></i>`
+    btn.value = "1"
+    
+    a = parseInt(audio.currentTime) * 10;
+   
 }
 
 
