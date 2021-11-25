@@ -1,31 +1,27 @@
-
+// initial declaration ov variable
 let songlengthinsec = null;
-
-function fun1() {
-    console.log("hi");
-}
-console.log("hi")
 let box = document.querySelector('#myCanvas');
 let screensize=box.offsetWidth
 var elemLeft = null;
-var elemTop = null;
+
 var context = null;
 var e = null;
 
 let a = 1;
 let audio = document.getElementById("audio");
 
-songlengthinsec = audio.duration;
-
-
-console.log(screensize);
+songlengthinsec = audio.duration||227;
 var store = [];
+
+
+// added to onlaod creating bargraph using canvas
 function fun2(){
     e = document.getElementById('myCanvas')
     e.setAttribute("width",screensize)
     elemLeft = e.offsetLeft;
     context = e.getContext('2d');
     context.beginPath();
+    
    
     for (let i = 0; i <= screensize; i += 10) {
         let random = Math.random() * 60;
@@ -44,15 +40,20 @@ function fun2(){
     context.stroke();
     e.addEventListener('click', dispaly,false);
 }
+
+
+//implented bar graph onclick functionality
 function dispaly(event,second) {
-     console.log(second,"second")
+    
     if (second) {
        var xVal = second;
     }
     else {
         var xVal = parseInt(event.pageX - elemLeft)
-        console.log(xVal, screensize,"clicked on graph");
-        audio.currentTime = xVal*(songlengthinsec/screensize);
+       
+        let audioSetTime = xVal * (songlengthinsec / screensize);
+      
+        audio.currentTime = audioSetTime;
         a = xVal;
     }
 
@@ -88,7 +89,7 @@ function dispaly(event,second) {
        
     }
 
-
+//on click play pause btn functionality
 function fun3() {
     let btn = document.getElementById("playpause")
     
@@ -109,20 +110,19 @@ function fun3() {
     
 }
 
-
+//clear time interval,
 let timer = null;
-
 function color() {
-    console.log("hfdh")
+ 
     timer = setInterval(() => {
-        console.log(a,"value of a");
-        dispaly("jhk",a)
+       
+        dispaly("event",a)
         a += screensize/songlengthinsec;
     }, 1000);
 
 }
 
-
+//on pause stroting the curent-media-time
 audio.onpause = function (e) {
     console.log(e);
     clearInterval(timer)
@@ -130,10 +130,7 @@ audio.onpause = function (e) {
 }
 
 
-// audio.addEventListener("click", function (e) {
-//     console.log(e);
-//     console.log("hi")
-// })
 
 
+//refresh the page  on change screen size
 window.onresize = function(){ location.reload(); }

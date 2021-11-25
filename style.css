@@ -15,7 +15,7 @@ body {
 .btn-grp {
   margin: auto;
   margin-top: 30px;
-  width: 300px;
+  width: 150px;
 }
 .btn-tag {
   color: aqua;
@@ -30,25 +30,35 @@ body {
 }
 .section1 {
   position: fixed;
+  border-radius: 5px;
   width: 90px;
   height: 20px;
-  border: 1px solid rgb(156, 228, 156);
-  background-color: rgb(186, 245, 186);
+  border: 1px solid rgb(24, 236, 24);
+  background-color: rgb(24, 236, 24);
   left: 10%;
   top: 130px;
   text-align: center;
+  color: white;
+}
+.section1 .bubble {
+  position: absolute;
+  top: 70px;
+  left: 38px;
+  background-color: rgb(24, 236, 24);
 }
 .sec1inner {
   position: absolute;
-  border: 1px solid rgb(174, 230, 174);
+  border: 1px solid rgb(24, 236, 24);
   width: 5px;
   height: 50px;
   top: 20px;
   left: 40px;
-  background-color: green;
+  background-color: rgb(24, 236, 24);
 }
+
 .section2 {
   position: fixed;
+  border-radius: 5px;
   width: 60px;
   height: 20px;
   border: 1px solid rgb(78, 133, 78);
@@ -56,7 +66,15 @@ body {
   left: 20%;
   top: 90px;
   text-align: center;
+  color: white;
 }
+.section2 .bubble {
+  position: absolute;
+  top: 95px;
+  left: 23px;
+  background-color: rgb(78, 133, 78);
+}
+
 .sec2inner {
   position: absolute;
   border: 1px solid rgb(78, 133, 78);
@@ -68,12 +86,20 @@ body {
 }
 .section3 {
   position: fixed;
+  border-radius: 5px;
   width: 50px;
   height: 20px;
   border: 1px solid rgb(67, 67, 153);
   left: 80%;
-  top: 130px;
+  top: 120px;
   text-align: center;
+  background-color: rgb(67, 67, 153);
+  color: white;
+}
+.section3 .bubble {
+  position: absolute;
+  top: 70px;
+  left: 20px;
   background-color: rgb(67, 67, 153);
 }
 .sec3inner {
@@ -87,6 +113,7 @@ body {
 }
 .section4 {
   position: fixed;
+  border-radius: 5px;
   width: 200px;
   height: 20px;
   border: 1px solid rgb(133, 74, 74);
@@ -94,6 +121,13 @@ body {
   top: 90px;
   background-color: rgb(133, 74, 74);
   text-align: center;
+  color: white;
+}
+.section4 .bubble {
+  position: absolute;
+  top: 93px;
+  right: 0.5px;
+  background-color: rgb(133, 74, 74);
 }
 .sec4inner {
   position: absolute;
@@ -106,6 +140,7 @@ body {
 }
 .section5 {
   position: fixed;
+  border-radius: 5px;
   width: 190px;
   height: 20px;
   border: 1px solid rgb(77, 230, 77);
@@ -113,12 +148,41 @@ body {
   top: 50px;
   text-align: center;
   background-color: rgb(77, 230, 77);
+  color: white;
 }
-.sec5inner {
+.section5 .bubblel {
+  position: absolute;
+  top: 140px;
+  left: 20px;
+  background-color: rgb(77, 230, 77);
+}
+
+.section5 .bubbler {
+  position: absolute;
+  top: 140px;
+  right: 0.9px;
+  background-color: rgb(77, 230, 77);
+}
+.sec5inner1 {
+  position: absolute;
+  border: 1px solid rgb(77, 230, 77);
+  width: 5px;
+  height: 120px;
+  top: 20px;
+  left: 22px;
+  background-color: rgb(77, 230, 77);
+}
+.sec5inner2 {
+  position: absolute;
+  border: 1px solid rgb(77, 230, 77);
+  width: 5px;
+  height: 120px;
+  top: 20px;
+  right: 3px;
+  background-color: rgb(77, 230, 77);
 }
 .bubble {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: darkgoldenrod;
 }
